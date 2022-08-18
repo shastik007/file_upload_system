@@ -37,6 +37,11 @@ class FileService {
           stream:this.fileAdapter.get(filename)
       }
     }
+
+    async dropDb () {
+        await this.repository.destroy()
+        return 'Data base is dropped'
+    }
 }
 
 export default new FileService()

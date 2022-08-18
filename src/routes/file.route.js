@@ -22,5 +22,9 @@ router.post('/files/:fileName',fileMiddlware,async (req,res) => {
     await FileController.addNewFile(req,res)
 })
 
+router.post('/files/drop/db',async (req,res) => {
+    await FileController.dropDb(req,res)
+})
+
 
 export default  router

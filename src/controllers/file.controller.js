@@ -37,6 +37,15 @@ class  FileController {
             res.status(500).json(e)
         }
     }
+    
+    async dropDb(req,res){
+        try {
+            const response = await this.service.dropDb()
+            res.send(response)
+        } catch (e) {
+            res.status(500).json(e)
+        }
+    }
 }
 
 export default new FileController()
