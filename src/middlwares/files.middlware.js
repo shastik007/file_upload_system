@@ -5,7 +5,7 @@ const fileMiddlware = (req, res, next) => {
 	});
 	req.on('end', () => {
 		console.log(req.headers);
-		req.file = {data: file, mimetype: req.headers['content-type'], size: req.headers['content-length'],filename:req.headers['content-dispostion']};
+		req.file = {data: file, mimetype: req.headers['content-type'], size: req.headers['content-length']};
 		next();
 	});
 };

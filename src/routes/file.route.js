@@ -18,7 +18,7 @@ router.get('/files/:fileName',fileMiddlware,(req,res) => {
     FileController.findFileByName(req,res)
 })
 
-router.post('/files',fileMiddlware,async (req,res) => {
+router.post('/files/:fileName',fileMiddlware,async (req,res) => {
     await FileController.addNewFile(req,res)
 })
 
