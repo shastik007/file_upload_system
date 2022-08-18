@@ -1,0 +1,7 @@
+{"code":"ENOENT","errno":-4058,"level":"error","path":"","syscall":"open","timestamp":"2022-08-18T08:47:36.448Z"}
+{"code":"ENOENT","errno":-4058,"level":"error","path":"C:\\Users\\User\\Desktop\\BACKEND\\data\\jetigen.svg","syscall":"open","timestamp":"2022-08-18T08:47:59.985Z"}
+{"code":"ENOENT","errno":-4058,"level":"error","path":"","syscall":"open","timestamp":"2022-08-18T08:48:25.839Z"}
+{"code":"EISDIR","errno":-4068,"level":"error","path":"C:\\Users\\User\\Desktop\\BACKEND\\discovery-st\\file_system_express\\data","syscall":"open","timestamp":"2022-08-18T08:49:40.809Z"}
+{"code":"EISDIR","errno":-4068,"level":"error","path":"C:\\Users\\User\\Desktop\\BACKEND\\discovery-st\\file_system_express\\data","syscall":"open","timestamp":"2022-08-18T08:49:59.910Z"}
+{"code":"EISDIR","errno":-4068,"level":"error","path":"C:\\Users\\User\\Desktop\\BACKEND\\discovery-st\\file_system_express\\data","syscall":"open","timestamp":"2022-08-18T08:51:56.623Z"}
+{"code":"EISDIR","errno":-4068,"level":"error","path":"C:\\Users\\User\\Desktop\\BACKEND\\discovery-st\\file_system_express","syscall":"open","timestamp":"2022-08-18T08:52:24.407Z"}
