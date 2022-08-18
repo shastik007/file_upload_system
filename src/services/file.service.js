@@ -28,11 +28,14 @@ class FileService {
           })
     }
    async getFileByName(filename) {
-       const findedFile = await this.repository.findOne({ where: { filename }, raw: true })
-       if (findedFile === null) {
+       const meta = await this.repository.findOne({ where: { filename }})
+       if (meta === null) {
           return 'File is not found'
        }
-      return findedFile
+      return {
+          meta,
+          stream:this.fileAdapter.get(filename)
+      }
     }
 }
 

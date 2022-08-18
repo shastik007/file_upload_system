@@ -27,17 +27,16 @@ class  FileController {
         }
     }
 
-
     async findFileByName (req,res) {
         try{
-            const findedFile = await this.service.getFileByName(req.params['fileName'])
-            req.send(findedFile)
+            const { stream, meta } = await this.service.getFileByName(req.params['fileName'])
+			res.setHeader('content-type', meta.mimetype);
+			res.setHeader('content-length', meta.size); 
+            stream.pipe(res)
         }catch (e) {
             res.status(500).json(e)
         }
     }
-
-
 }
 
 export default new FileController()
