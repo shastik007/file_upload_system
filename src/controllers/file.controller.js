@@ -19,23 +19,24 @@ class  FileController {
 
 
     async getAllFiles(req,res) {
-        try{
+        // try{
             const allFiles = await this.service.getAllFiles()
             res.send(allFiles)
-        }catch (e) {
-            res.status(500).json(e)
-        }
+        // }catch (e) {
+        //     res.status(500).json(e)
+        // }
     }
 
     async findFileByName (req,res) {
-        try{
+        // try{
             const { stream, meta } = await this.service.getFileByName(req.params['fileName'])
 			res.setHeader('content-type', meta.mimetype);
-			res.setHeader('content-length', meta.size); 
+			res.setHeader('content-length', meta.size);
+            // console.log(stream);
             stream.pipe(res)
-        }catch (e) {
-            res.status(500).json(e)
-        }
+        // }catch (e) {
+        //     res.status(500).json(e)
+        // }
     }
     
     async dropDb(req,res){
